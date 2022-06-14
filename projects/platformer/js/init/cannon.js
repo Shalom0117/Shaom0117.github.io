@@ -27,12 +27,9 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        createCannon("top", 450); // cannon on top of screen located at x = 450
-        createCannon("bottom", 640); // cannon on bottom of screen located at x = 640
-        createCannon("right", 655); // cannon on right of screen located at y = 655
-        createCannon("right", 355); // cannon on right of screen located at y = 355
-        createCannon("left", 845); // cannon on left of screen located at y = 845
-        createCannon("left", 445); // cannon on left of screen located at y = 445
+        createCannon("top", 250); // cannon on top of screen located at x = 450
+        createCannon("top", 650)
+        createCannon("left", 355); // cannon on left of screen located at y = 445
         
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
