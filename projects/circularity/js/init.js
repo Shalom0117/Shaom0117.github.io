@@ -42,8 +42,8 @@ var init = function (window) {
         physikz.addRandomVelocity(circle, canvas, 10, 10);
         physikz.addRandomVelocity(circle, canvas, 10, 10);
         physikz.addRandomVelocity(circle, canvas, 10, 10);
-        physikz.addRandomVelocity(circle, canvas, 10, 10);
-        physikz.addRandomVelocity(circle, canvas, 10, 10);
+        physikz.addRandomVelocity(circle, canvas, 17, 10);
+        physikz.addRandomVelocity(circle, canvas, 12, 10);
 
 
         ////////////////////////////////////////////////////////////
@@ -57,21 +57,17 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            
-            physikz.updatePosition(circle);
- 	        physikz.updatePosition(circle);
- 	        physikz.updatePosition(circle);
- 	        physikz.updatePosition(circle);
- 	        physikz.updatePosition(circle);
+            // These were delted because they were called in the function below
 
-            for (var i = 0; i < ) {}
+            for (var i = 0; i < circles.length; i++) {
+                var eachCircle = circles[i];
+                physikz.updatePosition(eachCircle);
+               // game.checkCirclePosition(eachCircle);
+            }
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           game.checkCirclePosition(circle);
-           game.checkCirclePosition(circle);
-           game.checkCirclePosition(circle);
-           game.checkCirclePosition(circle);
-           game.checkCirclePosition(circle);
+            //Deleted for the same reason as the ones in todo 4
+          
             // TODO 9 : Iterate over the array
            
             
