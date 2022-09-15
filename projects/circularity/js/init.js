@@ -39,11 +39,12 @@ var init = function (window) {
             //Run 100 times
             drawCircle();
         }
-        physikz.addRandomVelocity(circle, canvas, 10, 10);
-        physikz.addRandomVelocity(circle, canvas, 10, 10);
-        physikz.addRandomVelocity(circle, canvas, 10, 10);
-        physikz.addRandomVelocity(circle, canvas, 17, 10);
-        physikz.addRandomVelocity(circle, canvas, 12, 10);
+        
+        // physikz.addRandomVelocity(circle, canvas, 10, 10);
+        // physikz.addRandomVelocity(circle, canvas, 10, 10);
+        // physikz.addRandomVelocity(circle, canvas, 10, 10);
+        // physikz.addRandomVelocity(circle, canvas, 17, 10);
+        // physikz.addRandomVelocity(circle, canvas, 12, 10);
 
 
         ////////////////////////////////////////////////////////////
@@ -85,7 +86,7 @@ var init = function (window) {
                 circle.x = 0;
             } //if the circle goes past the LEFT side of the screen 
             else if (circle.x < canvas.width) {
-                circle.x = 100
+                circle.x = canvas.width
             }
             else if (circle.y > canvas.height) {
                 circle.y = 0
