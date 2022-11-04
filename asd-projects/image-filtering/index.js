@@ -69,7 +69,7 @@ function applyFilterNoBackground(filterFunction) {
  
    }
   }                                    //IM ON THE TESTING PART OF TODO 7 BUT I HAD TO GO BACK TO THE "increaseGreenByBlue" PART OF TODO 6//
-
+                                                   // I NEED HELP ON WHAT TO PUT IN THE CODE BLOCK OF "increaseGreenByBlue"//
   
 
 };
