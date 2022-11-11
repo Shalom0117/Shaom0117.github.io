@@ -22,7 +22,7 @@ function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
    applyFilter(decreaseBlue);
    applyFilter(reddify);
-   applyFilter();
+   applyFilter(increaseGreenByBlue);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -40,8 +40,7 @@ function applyFilter(filterFunction) {
     console.log(image[i][s]);                       //shows process in console
     var rgbString = image[i][s];
     var rgbNumbers = rgbStringToArray(rgbString) 
-    filterFunction(rgbNumbers);                    //makes tint less red then before
-    //rgbNumbers[RED] = 255;                       // changes red from 0 to 255
+    filterFunction(rgbNumbers);                    //makes tint less red then before  
     rgbString = rgbArrayToString(rgbNumbers);     
     image[i][s] = rgbString;
 
@@ -55,20 +54,19 @@ console.log(keepInBounds(127)); // should print 127
 // TODO 7: Create the applyFilterNoBackground function
 
 function applyFilterNoBackground(filterFunction) {
-  var backGroundColor = image[0,0];
+  var backGroundColor = image[0][0];
   for (var i = 0; i < image.length; i++) {           // run through the rows
     for (var s = 0; s < image[i].length; s++) {      //goes through columns
      console.log(image[i][s]);                       //shows process in console
      var rgbString = image[i][s];
-     var rgbNumbers = rgbStringToArray(rgbString) 
-     rgbString = rgbArrayToString(rgbNumbers);
      if (rgbString !== backGroundColor){
-      image[i][s] = rgbString;
+      var rgbNumbers = rgbStringToArray(rgbString) 
+      filterFunction(rgbNumbers); 
+      rgbString = rgbArrayToString(rgbNumbers);
     }
-     
- 
-   }
-  }                                    //IM ON THE TESTING PART OF TODO 7 BUT I HAD TO GO BACK TO THE "increaseGreenByBlue" PART OF TODO 6//
+  }
+   image[i][s] = rgbString;    
+  }                                //IM ON THE TESTING PART OF TODO 7 BUT I HAD TO GO BACK TO THE "increaseGreenByBlue" PART OF TODO 6//
                                                    // I NEED HELP ON WHAT TO PUT IN THE CODE BLOCK OF "increaseGreenByBlue"//
   
 
@@ -93,5 +91,9 @@ function reddify (thisArray) {
 function decreaseBlue(arr){
   arr[BLUE] = keepInBounds(arr[BLUE] - 50);
 }
-function increaseGreenByBlue(arrTwo){}
+
+function increaseGreenByBlue(arr){
+  var result = arr[GREEN] + arr[BLUE];
+  arr[GREEN] = keepInBounds(result);
+}
  // CHALLENGE code goes below here
