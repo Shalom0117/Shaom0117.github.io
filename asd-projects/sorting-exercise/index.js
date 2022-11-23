@@ -14,15 +14,67 @@ The CSS ids you will work with are:
 ///////////////////////////////////////////////////////////////////////
 
 // TODO 2: Implement bubbleSort
+async function bubbleSort(array){                  //sorts all elements of the provided array from smallest to largest
+    for(var i = 0; i < array.length; i++){
+      for(var j = i + 1; j < array.length; j++){
+        if(array[j].value < array[i].value){
+          swap(array, i, j);
+          updateCounter(bubbleCounter);
+          await sleep();
+        }
+      }
+    }
+  }
 
 
 // TODO 3: Implement quickSort
 
+async function quickSort(array, left, right){
+    console.log("quick sort is called")
+    if (right - left < 0){
+        return;
+    }
+    else if (right - left > 0){
+        var index = await partition(array, left, right);
+        if (left < index - 1){
+            await quickSort(array, left, index - 1);
+        } 
+        if (right > index){
+            await quickSort(array, index, right);
+        }
+    }
+}           
 
 // TODOs 4 & 5: Implement partition
 
+async function partition(array, right, left){
+ var pivot = array[Math.floor((right + left)/2)].value;
+ while (left < right){
+ console.log("yo");
+    while (array[left].value < pivot){
+        left++;
+    }
+    while (array[right].value > pivot){
+        right--;
+    }
+
+    if(left < right){
+        swap(array, left, right);
+        updateCounter(quickCounter);
+        await sleep();
+        }    
+  }  
+return left + 1;
+} 
+
 
 // TODO 1: Implement swap
+function swap(array,i,j){                          //switches two elements of the provided array
+ var temp = array[i]
+ array[i] = array[j]
+ array[j] = temp;
+drawSwap(array,i,j);
+}
 
 
 ///////////////////////////////////////////////////////////////////////
