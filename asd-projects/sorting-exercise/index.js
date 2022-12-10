@@ -34,7 +34,8 @@ async function quickSort(array, left, right){
     if (right - left < 0){
         return;
     }
-    else if (right - left > 0){
+    else{
+        console.log(left, right);
         var index = await partition(array, left, right);
         if (left < index - 1){
             await quickSort(array, left, index - 1);
@@ -47,21 +48,23 @@ async function quickSort(array, left, right){
 
 // TODOs 4 & 5: Implement partition
 
-async function partition(array, right, left){
- var pivot = array[Math.floor((right + left)/2)].value;
- while (left < right){
- console.log("yo");
-    while (array[left].value < pivot){
-        left++;
-    }
-    while (array[right].value > pivot){
-        right--;
-    }
+async function partition(array, left, right){
+    console.log(left, right);
+    var pivot = array[Math.floor((right + left)/2)].value;
+    while (left < right){
+         console.log("yo");
 
-    if(left < right){
-        swap(array, left, right);
-        updateCounter(quickCounter);
-        await sleep();
+        while (array[left].value < pivot){
+            left++;
+        }
+        while (array[right].value > pivot){
+            right--;
+        }
+
+        if(left < right){
+            swap(array, left, right);
+            updateCounter(quickCounter);
+            await sleep();
         }    
   }  
 return left + 1;
@@ -70,10 +73,10 @@ return left + 1;
 
 // TODO 1: Implement swap
 function swap(array,i,j){                          //switches two elements of the provided array
- var temp = array[i]
- array[i] = array[j]
- array[j] = temp;
-drawSwap(array,i,j);
+    var temp = array[i]
+    array[i] = array[j]
+    array[j] = temp;
+    drawSwap(array,i,j);
 }
 
 

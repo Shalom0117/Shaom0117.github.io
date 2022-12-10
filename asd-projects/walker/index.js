@@ -15,8 +15,8 @@ function runProgram(){
   // Game Item Objects    
   // one-time setupqw
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
-  $(document).on('keydown', handleKeydown);
-  console.log(handleKeydown);    // change 'eventType' to the type of event you want to handle
+  $(document).on('keydown', handleKeydown);  // change 'eventType' to the type of event you want to handle
+  $(document).on('keyup', handleKeyUp);
 
   var KEY = {
     "LEFT": 37,
@@ -29,6 +29,7 @@ function runProgram(){
   var yCoordinates = 0;
   var speedXAxis = 0;
   var speedYAxis = 0;
+
 
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -49,26 +50,46 @@ function runProgram(){
   */
   function handleKeydown(event) {
 
-      if(event.which === 37){
+      if(event.which === KEY.LEFT){
         console.log("Left pressed");
          speedXAxis = -5;
       }
-      if(event.which === 39){
+      if(event.which === KEY.RIGHT){
         console.log("Rigt pressed");
         speedXAxis = 5;
 
       }
-      if(event.which === 38){
+      if(event.which === KEY.UP){
        console.log("Up key pressed");
-       speedXAxis = 5;
+       speedYAxis = 5;
 
       }
-      if(event.which === 40){
+      if(event.which === KEY.DOWN){
        console.log("Down key pressed");
-       speedXAxis = -5;
+       speedYAxis = -5;
 
       }
     
+  }
+
+  function handleKeyUp (event){
+
+      if(event.which === KEY.LEFT){
+      console.log("left key released");
+      speedXAxis = 0;
+      }
+      if(event.which === KEY.RIGHT){
+      console.log("right key released");
+      speedXAxis = 0;
+      }
+      if(event.which === KEY.UP){
+      console.log("up key released");
+      speedYAxis = 0;
+      }
+      if(event.which === KEY.DOWN){
+      console.log("down key released");
+      speedYAxis = 0;
+      }
   }
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
@@ -85,10 +106,12 @@ function runProgram(){
   
   function repositionGameItem(){
     xCoordinates += speedXAxis;
+    yCoordinates += speedYAxis;
   }
 
   function redrawGameItem(){
-    $("walker").css("left", xCoordinates);
+    $("#walker").css("left", xCoordinates);
+    $("#walker").css("top", yCoordinates);
   }
 
   //console.log(redrawGameItem);
