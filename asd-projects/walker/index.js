@@ -61,12 +61,12 @@ function runProgram(){
       }
       if(event.which === KEY.UP){
        console.log("Up key pressed");
-       speedYAxis = 5;
+       speedYAxis = -5;
 
       }
       if(event.which === KEY.DOWN){
        console.log("Down key pressed");
-       speedYAxis = -5;
+       speedYAxis = 5;
 
       }
     
