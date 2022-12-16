@@ -43,6 +43,8 @@ function runProgram(){
   function newFrame() {
     repositionGameItem()
     redrawGameItem()
+    outOfBoundsX()
+    outOfBoundsY()
   }
   
   /* 
@@ -112,6 +114,22 @@ function runProgram(){
   function redrawGameItem(){
     $("#walker").css("left", xCoordinates);
     $("#walker").css("top", yCoordinates);
+  }
+
+  function outOfBoundsX(){
+    if(xCoordinates >= 1000){
+      xCoordinates = 1000;
+    } else if (xCoordinates <= 5){
+      xCoordinates = 5;
+    }
+  }
+
+  function outOfBoundsY(){
+    if(yCoordinates >= 700){
+      yCoordinates = 700;
+    } else if (yCoordinates <= 5){
+      yCoordinates = 5;
+    }
   }
 
   //console.log(redrawGameItem);
