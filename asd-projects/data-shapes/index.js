@@ -43,9 +43,9 @@ $(document).ready(function () {
     "shape": "circle",
     "repeat": 3
   }
-//dataShapes.push(shape);
+  //dataShapes.push(shape);
   // TODO 2: add a new property to all data shapes
-//dataShapes.push(goodBehavior);
+  //dataShapes.push(goodBehavior);
 
   for (var i = 0; i <= dataShapes.length-1; i++) {
    var currentShape = dataShapes[i];
