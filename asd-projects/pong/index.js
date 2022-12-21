@@ -24,6 +24,12 @@ function runProgram(){
     return gameitem;
 
   }
+
+  var ball = gameItem("#ball", $("#ball").css("left"), $("#ball").css("top"), speedX, speedY, $("#ball").width(), $("#ball").height());
+  var leftpaddle = gameItem("#leftpaddle", x, y, speedX, speedY, $("#leftpaddle").width(), $("#leftpaddle").height());
+  var rightpaddle = gameItem('#rightpaddle', x, y, speedX, speedY, $("#rightpaddle").width(), $("#rightpaddle").height());
+  var player1score = gameItem('#player1score', x, y, speedX, speedY, $("#player1score").width(), $("#player1score").height());
+  var player2score = gameItem('#player2score', x, y, speedX, speedY, $("#player2score").width(), $("#player2score").height());
   
 
 
