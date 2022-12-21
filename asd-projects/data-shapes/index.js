@@ -43,7 +43,7 @@ $(document).ready(function () {
     "shape": "circle",
     "repeat": 3
   }
-  //dataShapes.push(shape);
+    dataShapes.push(shape);
   // TODO 2: add a new property to all data shapes
   //dataShapes.push(goodBehavior);
 
@@ -68,6 +68,7 @@ $(document).ready(function () {
 
   // TODO 4-a: add a function that handles the good display type
   function handleGood(color, shape, repeat){
+    setBackgroundWithSimple(color, shape, repeat);
     animationDetails.displayType = 2;
   }
 
@@ -96,7 +97,7 @@ $(document).ready(function () {
   function badDisplay() {
     // TODO 5-b: call your handleBad function
     var curentShape = dataShapes[currentIndex];
-    var repeat = dataShapes[currentShape.repeat];
+    var repeat = currentShape.repeat;
     handleBad(currentShape,repeat);
   }
 

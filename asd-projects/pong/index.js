@@ -12,6 +12,19 @@ function runProgram(){
   const FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   
   // Game Item Objects
+  function gameItem (id, x, y, speedX, speedY, width, height) {
+    var gameItem = {};
+    gameitem.id = id,
+    gameitem.x = x,
+    gameitem.y = y,
+    gameitem.speedX = speedX,
+    gameitem.speedY = speedY,
+    gameitem.width = width,
+    gameitem.height = height;
+    return gameitem;
+
+  }
+  
 
 
   // one-time setup
