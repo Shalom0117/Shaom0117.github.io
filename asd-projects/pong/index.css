@@ -1,0 +1,62 @@
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+#board {
+  width: 1347px;
+  height: 590px;
+  border: 1px solid white;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+}
+
+#leftpaddle {
+  background-color: rgb(192, 179, 179);
+  width: 10px;
+  height: 200px;
+  border-radius: 10px;
+  position: absolute;  
+  top: 200px;
+  left:100px;   
+}
+
+#rightpaddle {
+  background-color: rgb(192, 179, 179);
+  width: 10px;
+  height: 200px;
+  border-radius: 10px;
+  position:absolute;
+  top: 200px;
+  left: 1237px;
+  
+}
+
+#ball {
+  background-color: rgb(19, 212, 19);
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 295px;
+  left: 673px;
+}
+
+#player1score {
+background-color: rgb(192, 179, 179);
+width:150px;
+height:20px;
+position: absolute;
+top:-290px;
+left: -445px; 
+}
+
+#player2score {
+  background-color: rgb(192, 179, 179);
+  width:150px;
+  height:20px;
+  position:absolute;
+  top:-290px;
+  left: 300px;
+
+}
