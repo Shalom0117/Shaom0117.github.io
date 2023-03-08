@@ -92,12 +92,24 @@
 
     // TODO 1: bounce the ball off the top
 
+    if(ball.y <= 0){
+      ball.yVelocity *= -1;
+    }
 
     // TODO 2: bounce the ball off the bottom
 
+    if(ball.y >= canvas.height){
+      ball.yVelocity *= -1;
+    }
 
     // TODO 3: bounce the ball off each of the paddles
 
+    if(ball.x <= paddlePlayer.width){
+      ball.xVelocity *= -1;
+    }
+    if(ball.x >= paddleCPU.x){
+      ball.xVelocity *= -1;
+    }
 
   }
 
@@ -109,5 +121,5 @@
     return paddle;
   }
 
-
+  
 }(window, window.createjs, window.opspark, window._));
