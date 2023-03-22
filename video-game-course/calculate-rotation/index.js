@@ -1,7 +1,7 @@
 // TODO 4: add a param for your game lib last //
-(function(window, opspark) {
+(function(window, opspark, shalomRepository) {
   console.log('index.js initialized!');
-
+ 
   const
     assets = opspark.assets,
     engine = opspark.V6().activateResize(),
@@ -12,13 +12,23 @@
   stage.addChild(textfield);
 
   // try a different hex color if you want //
-  const ship = assets.makeShip('#4286f4');
+  const ship = assets.makeShip('#3FBF50');
+  const shipTwo = assets.makeShip('#FC0C0C');
   
   
   // TODO 5: Center the ship on the stage //
   
+  ship.x = canvas.width/2
+  ship.y = canvas.height/2
+  shipTwo.x = canvas.width/3
+  shipTwo.y = canvas.height/3
+
 
   // TODO 6: Add the ship to the stage //
+  
+
+  stage.addChild(ship)
+  stage.addChild(shipTwo)
   
 
   
@@ -35,9 +45,19 @@
      * these values such that they're packed into a point?
      */
     
+    var mouse = {
+      x: stage.mouseX,
+      y: stage.mouseY,
+    };
+    
+
+    const degrees = shalomRepository.numz.getAngleDegrees(ship, mouse)
+    const degreesTwo = shalomRepository.numz.getAngleDegrees(shipTwo, mouse)
     
     // TODO 8: Set the ship's rotation property to the degrees //
     
+    ship.rotation = degrees;
+    shipTwo.rotation = degreesTwo;
     
     
     /*
@@ -45,12 +65,12 @@
      * with the current angle degrees. Degrees will be a value 
      * between π and -π, or, 180 and -180.
      */
-    // assets.updateText(textfield, `Degrees: ${degrees.toFixed(3)}°`, canvas);
+     assets.updateText(textfield, `Degrees: ${degrees.toFixed(3)}°`, canvas);
   }
 
   engine
     .addTickHandlers(update)
     .activateTick();
-
+  
 // TODO 3: pass your game lib last with, window.my-game-lib //
-}(window, window.opspark));
+}(window, window.opspark, window.shalomRepository));

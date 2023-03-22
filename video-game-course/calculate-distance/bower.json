@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "EaselJS": "^1.0.2",
-    "V6": "^0.0.2"
+    "V6": "^0.0.2",
+    "Shalom-s-Repository": "https://github.com/Shalom0117/Shalom-s-Repository.git#^0.0.2"
   }
 }
