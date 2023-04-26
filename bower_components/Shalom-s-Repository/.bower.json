@@ -1,0 +1,31 @@
+{
+  "name": "Shalom-s-Repository",
+  "homepage": "https://github.com/Shaom0117/Shalom-s-Repository",
+  "authors": [
+    "Shalom0117 <shalomalexander707@gmail.com>"
+  ],
+  "description": "library for video games",
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "version": "0.0.5",
+  "_release": "0.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.5",
+    "commit": "c28cb61e0a9178a1a7072b91ea5e7d220263f194"
+  },
+  "_source": "https://github.com/Shalom0117/Shalom-s-Repository.git",
+  "_target": "^0.0.5",
+  "_originalSource": "https://github.com/Shalom0117/Shalom-s-Repository.git",
+  "_direct": true
+}

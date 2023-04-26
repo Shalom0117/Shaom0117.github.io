@@ -1,0 +1,20 @@
+{
+  "name": "Shalom-s-Repository",
+  "homepage": "https://github.com/Shaom0117/Shalom-s-Repository",
+  "authors": [
+    "Shalom0117 <shalomalexander707@gmail.com>"
+  ],
+  "description": "library for video games",
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

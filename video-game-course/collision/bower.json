@@ -21,6 +21,8 @@
     "opspark-draw": "^1.0.0",
     "racket": "^1.1.1",
     "V6": "^0.0.2",
-    "messenjah": "^1.0.0"
+    "messenjah": "^1.0.0",
+    "Shaom0117.github.io": "https://github.com/Shalom0117/Shaom0117.github.io.git",
+    "Shalom-s-Repository": "https://github.com/Shalom0117/Shalom-s-Repository.git#^0.0.5"
   }
 }
